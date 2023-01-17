@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Estilos de textos y botones*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.btn {
+  font-family: "Monstserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #ff6b14;
+  border-color: #ff6b14;
+}
+
+.btn-primary:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+/*Navbar*/
+.bg-light {
+  background-color: #ff6b14 !important;
+}
+.navbar-brand {
+  width: 100px;
+}
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  height: 120px;
+  padding: 40px;
+}
+.nav-link {
+  color: #fff !important;
+}
+
+.navbar-collapse {
+  display: -ms-flexbox !important;
+  -ms-flex-preferred-size: auto;
+  flex-basis: fit-content;
+  justify-content: flex-end;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 0px 60px 0px;
+}
+
+.form-group {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tabla {
+  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
