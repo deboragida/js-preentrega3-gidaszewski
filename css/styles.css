@@ -42,6 +42,12 @@ p {
   border-color: #000000;
 }
 
+.btn-primary:after{
+  background-color: #ff6b14;
+  border-color: #ff6b14;
+}
+
+
 /*Navbar*/
 .bg-light {
   background-color: #ff6b14 !important;
