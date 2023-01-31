@@ -49,24 +49,25 @@ function crearHtml(arr) {
     <td>${item.precio}</td>
     <td>${item.comision}</td>
     <td>${item.pago}</td>
-    <td><button class="btn btn-danger" id="${item.codigo}"> Borrar </button></td>
+    <td><button class="btn btn-danger" id="button-${item.codigo}"> Borrar </button></td>
     </tr>`;
     tbody.innerHTML += html;
+    const btn = document.getElementById(`button-${item.codigo}`);
+    btn.addEventListener("click", () => {
+      eliminar(item.codigo);
+    })
   }
 }
 
-/* Borrar productos NO ME FUNCIONA */
-const arrayBorrar = document.querySelectorAll("td .btn.btn-danger");
-arrayBorrar.forEach((btn)=>{
-    btn.btn-danger.addEventListener('click',()=>{
-        ventas = ventas.filter((el) => el.codigo != btn.btn-danger.id);
-        console.log(ventas);
+function eliminar(codigo) {
+  const producto = ventas.find((producto) => producto.codigo === codigo);
+  ventas.splice(ventas.indexOf(producto), 1);
+  console.log(ventas);
 
-        guardarLS(ventas);
-        crearHtml(ventas);
-    })
-})
-    
+  guardarLS(ventas);
+  crearHtml(ventas);
+}
+
 crearHtml(ventas);
 
 //Listeners
@@ -87,6 +88,29 @@ formulario.addEventListener("submit", (e) => {
   guardarLS(ventas);
   crearHtml(ventas);
 
-  formulario.reset()
-
+  document.getElementById("formulario").reset();
 });
+
+// Libreria
+btnVenta.addEventListener('click', ()=>{
+  Toastify({
+    text: "Producto agregado a la lista",
+    duration: 1500,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #ED1A3B, #9E1462)"
+    },
+    offset: {
+      y: 20
+    },
+    onClick: function(){}
+  }).showToast();
+})
+
+fetch("./data/data.json")
+.then ((response) => response.json())
+.then((data) =>{
+  crearHtml(data);
+})

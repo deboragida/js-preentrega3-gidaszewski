@@ -15,15 +15,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <title>Home</title>
   </head>
 
   <body>
-    <!-- Inicio Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="./image/logo_natura.svg" alt="logo"/></a>
+        <img src="./image/logo_natura.svg" alt="logo"
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -31,7 +36,8 @@
         data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup"
         aria-expanded="false"
-        aria-label="Toggle navigation">
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -45,57 +51,55 @@
         </div>
       </div>
     </nav>
-    <!-- Fin Navbar -->
-
+   
     <div class="container header">
-       <H1>Cotizador de comisiones Natura</H1>
+      <h1>Cotizador de comisiones Natura</h1>
     </div>
 
-    <!-- Inicio Formulario -->
-    <div class="container" id="formulario">
-      <form>
+    <!-- Formulario -->
+    <div class="container">
+      <form id="formulario">
         <div class="form-group">
           <label for="cantidad">Cantidad</label>
-          <input type="number" class="form-control" id="cantidad">
+          <input type="number" class="form-control" id="cantidad" />
         </div>
         <div class="form-group">
-          <label for="producto">Código</label>
-          <input type="text" class="form-control" id="codigo">
+          <label for="codigo">Código</label>
+          <input type="text" class="form-control" id="codigo" />
         </div>
         <div class="form-group">
           <label for="producto">Producto</label>
-          <input type="text" class="form-control" id="producto">
+          <input type="text" class="form-control" id="producto" />
         </div>
         <div class="form-group">
           <label for="precio">Precio</label>
-          <input type="" class="form-control" id="precio">
+          <input type="" class="form-control" id="precio" />
         </div>
-          <button type="submit" class="btn btn-primary">Calcular</button>
+        <button type="submit" class="btn btn-primary" id="btnVenta">Calcular</button>
       </form>
     </div>
-    <!-- Fin Formulario -->
-
-    <!-- Inicio tabla -->
+    
+    <!-- Tabla -->
     <div class="container tabla">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Código</th>
-          <th scope="col">Producto</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Comisión</th>
-          <th scope="col">Pago</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-       <!-- contenido dinamico -->
-      </tbody>
-    </table>
-  </div>
-    <!-- Fin tabla -->
-
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Código</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Comisión</th>
+            <th scope="col">Pago</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- contenido dinamico -->
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -111,6 +115,11 @@
       integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <!-- Mi archivo de JS -->
     <script src="./js/main.js"></script>
   </body>
 </html>
