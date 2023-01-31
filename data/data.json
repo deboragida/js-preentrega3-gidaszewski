@@ -1,0 +1,18 @@
+[
+    {
+       "cantidad":2,
+       "codigo":13120,
+       "producto":"Kaiak Eau de toilette",
+       "precio":6000,
+       "comision":3600,
+       "pago":8400
+    },
+    {
+       "cantidad":1,
+       "codigo":74900,
+       "producto":"Crema corporal Todo dia",
+       "precio":1950,
+       "comision":585,
+       "pago":1365
+    }
+ ]
